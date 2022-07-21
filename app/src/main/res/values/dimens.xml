@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_label_marginTop">56dp</dimen>
+    <dimen name="login_button_marginBottom">80dp</dimen>
+    <dimen name="repo_item_user_img_size">24dp</dimen>
+</resources>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">RepoSearchApp</string>
+    <string name="desc_img_serviceName">serviceName</string>
+
+    <!-- home fragment -->
+    <!-- tool bar image content description -->
+    <string name="desc_img_search">searchIcon</string>
+    <string name="desc_img_userProfile">userProfile</string>
+    <string name="desc_home_filter">filterIcon</string>
+    <string name="text_filter">Filter</string>
+    <string name="text_option">Option</string>
+    <string name="desc_issue_state">desc_issue_state</string>
+
+    <!-- tab item text -->
+    <string name="text_tab_issue">Issue</string>
+    <string name="text_tab_noti">Notification</string>
+
+    <!-- error msg -->
+    <string name="error_issue_list">이슈 정보를 받아오는 도중 문제가 발생했습니다.</string>
+    <string name="error_notification_list">알림 정보를 받아오는 도중 문제가 발생했습니다.</string>
+    <string name="desc_issue_type">SelectedIssueType</string>
+    <string name="error_notification_read">작업을 완료하지 못했어요.ð</string>
+
+    <!-- issue filter option -->
+    <string name="name_open_option">Open</string>
+    <string name="name_closed_option">Closed</string>
+    <string name="name_all_option">All</string>
+
+    <string name="login_label">What In\nMy GitHub</string>
+    <string name="login_button_label">Github 로그인</string>
+    <string name="preference_file_key">com.example.reposearchapp.PREFERENCE_FILE_KEY</string>
+    <string name="login_success">로그인 성공</string>
+    <string name="login_fail">로그인 실패 %s</string>
+    <string name="content_search">Search all of GitHunb for People, Repositories, Organizations, Issues, \nand Pull Requests.</string>
+    <string name="label_search">Find Your Stuff</string>
+
+    <!-- profile -->
+    <string name="profile_repository">Repositories</string>
+    <string name="profile_starred">Starred</string>
+    <string name="profile_follower">%d Followers</string>
+    <string name="profile_following">%d Following</string>
+</resources>

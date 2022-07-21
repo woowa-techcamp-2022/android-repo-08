@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.example.reposearchapp.model.search.RepoItemModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_user_img"
+            circleImageUrl="@{item.ownerImgUrl}"
+            android:layout_width="@dimen/repo_item_user_img_size"
+            android:layout_height="@dimen/repo_item_user_img_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_user_nm"
+            style="@style/grayContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="20dp"
+            android:text="@{item.ownerName}"
+            app:layout_constraintBottom_toBottomOf="@id/iv_user_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_user_img"
+            app:layout_constraintTop_toTopOf="@id/iv_user_img" />
+
+        <TextView
+            android:id="@+id/tv_repo_nm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{item.name}"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tv_user_nm"
+            app:layout_constraintStart_toStartOf="@id/tv_user_nm"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_nm" />
+
+        <TextView
+            android:id="@+id/tv_repo_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.description}"
+            android:textColor="@color/white"
+            android:visibility="@{item.description == null ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="@id/tv_user_nm"
+            app:layout_constraintStart_toStartOf="@id/tv_user_nm"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_nm" />
+
+        <TextView
+            android:id="@+id/tv_star"
+            style="@style/grayContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="11dp"
+            android:drawableStart="@drawable/ic_star"
+            android:drawablePadding="3dp"
+            android:text="@{String.valueOf(item.stargazersCount)}"
+            app:layout_constraintStart_toStartOf="@id/tv_repo_nm"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_description" />
+
+        <TextView
+            android:id="@+id/tv_lang"
+            tvDrawableTint="@{item.languageColor}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:drawableStart="@drawable/circle"
+            android:drawablePadding="3dp"
+            android:text="@{item.language}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tv_star"
+            app:layout_constraintStart_toEndOf="@id/tv_star" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_star" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

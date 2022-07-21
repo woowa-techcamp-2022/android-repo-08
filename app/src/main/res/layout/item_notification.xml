@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/img_repository_owner"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/desc_issue_state"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_repo_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tv_notification_date"
+            app:layout_constraintStart_toEndOf="@id/img_repository_owner"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="sam/whatsinmygithub" />
+
+        <TextView
+            android:id="@+id/tv_notification_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1일전"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_repo_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_notification_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/tv_comments_number"
+            app:layout_constraintStart_toStartOf="@id/tv_repo_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+            tools:text="프로젝트 요구사항 및 참고 자료" />
+
+        <TextView
+            android:id="@+id/tv_comments_number"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/background_comment_number"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_notification_title"
+            tools:text="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:background="@color/navy" />
+
+</LinearLayout>
